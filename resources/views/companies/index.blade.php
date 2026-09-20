@@ -1,6 +1,11 @@
 @extends('leaute.app')
 @section('content')
-    <h2 class="text-center">Bu tashkilotlar ro'yxati</h2>
+    <h2 class="text-center p-3">Bu tashkilotlar ro'yxati</h2>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="{{'companies/create'}}"><button class="btn btn-success" type="button">Tahkilot qo'shish</button></a>
+  
+</div>
+<br>
     <table class="table table-bordered">
             <thead>
                 <tr>

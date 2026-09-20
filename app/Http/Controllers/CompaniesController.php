@@ -22,7 +22,7 @@ class CompaniesController extends Controller
      */
     public function create()
     {
-        //
+        return view('companies.create');
     }
 
     /**
@@ -30,7 +30,12 @@ class CompaniesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->validate([
+            'name'=>'required',
+            'address'=>'required',
+            'phone'=>'required'
+        ]);
+        dd($data);
     }
 
     /**
