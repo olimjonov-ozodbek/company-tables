@@ -11,7 +11,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        $companies=Company::paginate(20);
+        $companies=Company::orderByDesc('created_at')-> paginate(20);
         return view('companies.index',[
             'companies'=>$companies
         ]);
@@ -33,9 +33,11 @@ class CompaniesController extends Controller
         $data=$request->validate([
             'name'=>'required',
             'address'=>'required',
-            'phone'=>'required'
+            'phone'=>['required', new \App\Rules\PhonNumber()]
         ]);
-        dd($data);
+        $company=Company::create($data);
+
+        return redirect()->route('companies.index');
     }
 
     /**

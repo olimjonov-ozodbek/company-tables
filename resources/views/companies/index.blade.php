@@ -9,10 +9,10 @@
     <table class="table table-bordered">
             <thead>
                 <tr>
-                   <td>T/R</td>
-                   <td>Tashkilot nomi</td>
-                   <td>Tashkilot manzili</td>
-                   <td>Tashkilot raqami</td>
+                   <th>T/R</th>
+                   <th>Tashkilot nomi</th>
+                   <th>Tashkilot manzili</th>
+                   <th>Tashkilot raqami</th>
                 </tr>
             </thead>
             <tbody>
