@@ -16,12 +16,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($companies as $copmany)
+                @foreach($companies as $company)
                 <tr>
                     <td>{{($companies->currentpage()-1)*$companies->perpage()+ $loop->index+1}}</td>
-                    <td>{{$copmany->name}}</td>
-                    <td>{{$copmany->address}}</td>
-                    <td>{{$copmany->phone}}</td>
+                    <td> <a href="{{route('companies.show',['company'=>$company->id])}}">{{$company->name}}</a></td>
+                    <td>{{$company->address}}</td>
+                    <td>{{$company->phone}}</td>
                 </tr>
                 @endforeach
             </tbody>
