@@ -14,5 +14,6 @@ Route::get('/', function () {
 
 Route::resource('/companies',CompaniesController::class);
 
-
-
+use App\Http\Controllers\LogicController;
+Route::get('/mantiq', [LogicController::class, 'index']);
+Route::post('/mantiq/hisoblash', [LogicController::class, 'calculate'])->name('logic.calculate');
